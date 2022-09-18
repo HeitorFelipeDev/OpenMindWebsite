@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenMind - Livros, E-books, Mangás</title>
+    <!-- Link-css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Script-js -->
+    <script src="assets/js/script.js" defer></script>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- HEADER-SECTION-START -->
+    <header class="header">
+        <a href="#" class="logo">
+            <h2>
+                <i class="fas fa-book-open"></i>
+                Open Mind
+            </h2>
+        </a>
+
+        <nav class="navbar">
+            <!-- Search-section -->
+            <div class="search-container-xl">
+                <input type="text" name="search" placeholder="Pesquisar por gênero, autor ou livro">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+
+            <!-- Menu-section -->
+            <section id="menu-container">
+                <ul class="menu">
+                    <li class="nav-item">
+                        <a href="#" onclick="closeMenu();" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ofertas" onclick="closeMenu();" class="nav-link">Ofertas</a>
+                    </li>
+                    <li class="nav-item nav-item-dropdown">
+                        <span onclick="changeDropdown()">
+                            Categorias
+                            <i class="fa fa-angle-right" id="icon-dropdown" aria-hidden="true"></i>
+                        </span>
+                        <div class="dropdown-container">
+                            <a href="#ficcao" onclick="closeMenu();" class="nav-link">Ficção</a>
+                            <a href="#financas" onclick="closeMenu();" class="nav-link">Finanças</a>
+                            <a href="#des-pessoal" onclick="closeMenu();" class="nav-link">Des. Pessoal</a>
+                            <a href="#filosofia" onclick="closeMenu();" class="nav-link">Filosofia</a>
+                            <a href="#classicos" onclick="closeMenu();" class="nav-link">Clássicos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre" onclick="closeMenu();" class="nav-link">Sobre</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contato" onclick="closeMenu();" class="nav-link">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" id="button-darkmode" class="nav-link">
+                            <i class="fas fa-moon" id="icon-state"></i>
+                            <span id="state-mode">Modo escuro</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="icon-navbar" id="button-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="icon-navbar" id="button-favoritos">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+            </div>
+            <div class="icon-navbar" id="button-user">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+
+            <a href="#" class="navbar_button">
+                <span class="bar" id="top"></span>
+                <span class="bar" id="center"></span>
+                <span class="bar" id="bottom"></span>
+            </a>
+
+            <!-- Search-section -->
+            <section id="search-container">
+                <div id="button-close-search">
+                    <i class="fa fa-x" aria-hidden="true"></i>
+                </div>
+                <div class="search-wrapper">
+                    <img src="assets/images/img-search.png" alt="imagem de um livro">
+                    <p>Pesquise por gêneros, autores ou livros.</p>
+                    <div class="search-content">
+                        <input type="text" name="search" placeholder="Pesquisar...">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </section>
+        </nav>
+
+    </header>
+    <!-- HEADER-SECTION-END -->
+
+    <!-- MAIN-SECTION-START -->
+    <main class="main">
+        <div class="carrossel-container">
+            <section class="carrossel">
+                <!-- Slides do carrossel -->
+                <div class="slide">
+                    <img src="assets/images/s-1.png">
+                </div>
+                <div class="slide">
+                    <img src="assets/images/s-2.png">
+                </div>
+                <div class="slide">
+                    <img src="assets/images/2-3.png">
+                </div>
+                <!-- Botões do carrossel -->
+                <a href="#" class="prev" onclick="next_slide(-1);"> <i class="fa fa-angle-left"
+                        aria-hidden="true"></i></a>
+                <a href="#" class="next" onclick="next_slide(1);"> <i class="fa fa-angle-right"
+                        aria-hidden="true"></i></a>
+                <!-- Indicador de posição no carrossel -->
+                <div class="dots_box">
+                    <span class="dot" onclick="current_slide(1);"></span>
+                    <span class="dot" onclick="current_slide(2);"></span>
+                    <span class="dot" onclick="current_slide(3);"></span>
+                </div>
+            </section>
+        </div>
+        <h2 class="title">Ofertas</h2>
+        <section id="ofertas">
+            <div class="ofertas-container">
+                <div class="oferta">
+                    <div class="etiqueta-o">
+                        <h3>-20%</h3>
+                    </div>
+                    <div class="oferta-img">
+                        <img src="assets/images/o-1.jpg">
+                    </div>
+                    <h3 class="book-name">Pai rico, Pai pobre</h3>
+                    <h4 class="autor-name">Robert Kiyosaki</h4>
+
+                </div>
+                <div class="oferta">
+                    <div class="etiqueta-o">
+                        <h3>-20%</h3>
+                    </div>
+                    <div class="oferta-img">
+                        <img src="assets/images/o-2.jpg">
+                    </div>
+                    <h3 class="book-name">Quem Pensa Enriquece</h3>
+                    <h4 class="autor-name">Napoleon Hill</h4>
+                </div>
+                <div class="oferta">
+                    <div class="etiqueta-o">
+                        <h3>-20%</h3>
+                    </div>
+                    <div class="oferta-img">
+                        <img src="assets/images/o-3.jpg">
+                    </div>
+                    <h3 class="book-name">O Homem Mais Rico Da Babilônia</h3>
+                    <h4 class="autor-name">George S. Clason</h4>
+                </div>
+                <div class="oferta">
+                    <div class="etiqueta-o">
+                        <h3>-20%</h3>
+                    </div>
+                    <div class="oferta-img">
+                        <img src="assets/images/0-4.jpg">
+                    </div>
+                    <h3 class="book-name">Os Segredos Da Mente milionária</h3>
+                    <h4 class="autor-name">T. Harv Eker</h4>
+                </div>
+                <div class="oferta">
+                    <div class="etiqueta-o">
+                        <h3>-20%</h3>
+                    </div>
+                    <div class="oferta-img">
+                        <img src="assets/images/o-5.jpg">
+                    </div>
+                    <h3 class="book-name">trabalhe 4 horas por semana</h3>
+                    <h4 class="autor-name">Timothy Ferriss</h4>
+                </div>
+                <div class="oferta">
+                    <div class="etiqueta-o">
+                        <h3>-20%</h3>
+                    </div>
+                    <div class="oferta-img">
+                        <img src="assets/images/0-6.jpg">
+                    </div>
+                    <h3 class="book-name">Do Mil ao Milhão</h3>
+                    <h4 class="autor-name">Thiago Nigro</h4>
+                </div>
+            </div>
+        </section>
+        <h2 class="title">Compre por categoria</h2>
+        <section id="categorias">
+            <nav class="navbar-categorias">
+                <ul class="menu">
+                    <li>
+                        <a href="#ficcao">Ficção /</a>
+                    </li>
+                    <li>
+                        <a href="#des-pessoal">Desenvolvimento pessoal /</a>
+                    </li>
+                    <li>
+                        <a href="#classicos">Clássicos /</a>
+                    </li>
+                    <li>
+                        <a href="#filosofia">Filosofia /</a>
+                    </li>
+                    <li>
+                        <a href="#">Outros</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="categorias-container">
+                <h2 class="title-c">Ficcção</h2>
+                <div id="ficcao">
+                    <div class="categoria-wrapper">
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-1.jpg">
+                            </div>
+                            <h3 class="book-name">1984</h3>
+                            <h4 class="autor-name">George Orwell</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-2.jpg">
+                            </div>
+                            <h3 class="book-name">A revolução dos bichos</h3>
+                            <h4 class="autor-name">George Orwell</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-3.jpg">
+                            </div>
+                            <h3 class="book-name">IT a coisa</h3>
+                            <h4 class="autor-name">Stephen King</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-4.jpg">
+                            </div>
+                            <h3 class="book-name">O pequeno príncipe</h3>
+                            <h4 class="autor-name">Antoine de Saint-Exupéry</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-5.jpg">
+                            </div>
+                            <h3 class="book-name">O Hobbit</h3>
+                            <h4 class="autor-name">J.R.R Tolkien</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-6.jpg">
+                            </div>
+                            <h3 class="book-name">Jogos vorazes</h3>
+                            <h4 class="autor-name">Suzanne Collins</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="title-c">Desenvolvimento Pessoal</h2>
+               
+                <div id="des-pessoal">
+                    <div class="categoria-wrapper">
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-7.jpg">
+                            </div>
+                            <h3 class="book-name">Como fazer amigos e influenciar pessoas</h3>
+                            <h4 class="autor-name">Dale Carnegie</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-8.jpg">
+                            </div>
+                            <h3 class="book-name">O poder do subconsciente</h3>
+                            <h4 class="autor-name">Joseph Murphy</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-9.jpg">
+                            </div>
+                            <h3 class="book-name">12 regras para a vida</h3>
+                            <h4 class="autor-name">Jordan B. Peterson</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-10.jpg">
+                            </div>
+                            <h3 class="book-name">O poder do hábito</h3>
+                            <h4 class="autor-name">Charles Duhigg</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-11.jpg">
+                            </div>
+                            <h3 class="book-name">As 48 leis do poder</h3>
+                            <h4 class="autor-name">Robert Greene</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-12.jpg">
+                            </div>
+                            <h3 class="book-name">Essencialismo</h3>
+                            <h4 class="autor-name">Greeg Mckeown</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="title-c">Clássicos</h2>
+               
+                <div id="classicos">
+                    <div class="categoria-wrapper">
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-13.jpg">
+                            </div>
+                            <h3 class="book-name">O príncpe</h3>
+                            <h4 class="autor-name">Nicolau Maquiavel</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-14.jpg">
+                            </div>
+                            <h3 class="book-name">Crime e castigo</h3>
+                            <h4 class="autor-name">Fiódor Dostoiévski</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-15.jpg">
+                            </div>
+                            <h3 class="book-name">Hamlet</h3>
+                            <h4 class="autor-name">William Shakespeare</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-16.jpg">
+                            </div>
+                            <h3 class="book-name">Guerra e paz</h3>
+                            <h4 class="autor-name">Liev Tostói</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-17.jpg">
+                            </div>
+                            <h3 class="book-name">A arte da guerra</h3>
+                            <h4 class="autor-name">Sun Tzu</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-18.jpg">
+                            </div>
+                            <h3 class="book-name">O alquimista</h3>
+                            <h4 class="autor-name">Paulo Coelho</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="title-c">Filosofia</h2>
+               
+                <div id="filosofia">
+                    <div class="categoria-wrapper">
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-19.jpg">
+                            </div>
+                            <h3 class="book-name">Assim falou zaratustra</h3>
+                            <h4 class="autor-name">Friedrich Nietzsche</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-20.jpg">
+                            </div>
+                            <h3 class="book-name">Discurso do método</h3>
+                            <h4 class="autor-name">Descartes</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-21.jpg">
+                            </div>
+                            <h3 class="book-name">A república</h3>
+                            <h4 class="autor-name">Platão</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-22.jpg">
+                            </div>
+                            <h3 class="book-name">Além do bem e do mal</h3>
+                            <h4 class="autor-name">Friedrich Nietzsche</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-23.jpg">
+                            </div>
+                            <h3 class="book-name">em busca de nós mesmos</h3>
+                            <h4 class="autor-name">Clóvis de Barrose e Pedro Calabrez</h4>
+                        </div>
+                        <div class="book">
+                            <div class="book-img">
+                                <img src="assets/images/b-24.jpg">
+                            </div>
+                            <h3 class="book-name">Um café com sêneca</h3>
+                            <h4 class="autor-name">David Fideler</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- MAIN-SECTION-END -->
+
+    <!-- FOOTER-SECTION-START -->
+    <footer class="footer">
+        <p>Desenvolvido com <i class="fa fa-heart" aria-hidden="true"></i> por Heitor Felipe</p>
+    </footer>
+    <!-- FOOTER-SECTION-END -->
+</body>
+
+</html>
